@@ -3,6 +3,8 @@ import contactDetails from '@/data/contact'
 import JsonLd from './JsonLd'
 
 export default function SiteStructuredData() {
+  const office = contactDetails.offices?.[0]
+
   const data = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -12,8 +14,28 @@ export default function SiteStructuredData() {
         name: BRAND,
         url: SITE_URL,
         email: contactDetails.email,
-        telephone: contactDetails.phoneDisplay,
+        telephone: contactDetails.phoneE164 || contactDetails.phoneDisplay,
         logo: `${SITE_URL}/images/logo.png`,
+        ...(office
+          ? {
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: office.streetAddress || office.address,
+                addressLocality: office.addressLocality || undefined,
+                addressRegion: office.addressRegion || undefined,
+                postalCode: office.postalCode || undefined,
+                addressCountry: office.addressCountry || 'US',
+              },
+            }
+          : {}),
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: contactDetails.phoneE164 || contactDetails.phoneDisplay,
+          email: contactDetails.email,
+          contactType: 'customer service',
+          areaServed: 'US',
+          availableLanguage: ['English'],
+        },
       },
       {
         '@type': 'WebSite',
