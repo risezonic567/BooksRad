@@ -26,6 +26,13 @@ export const metadata = {
   },
   description:
     'BooksRad helps you search flights, compare offers, and submit a clear booking request — airport suggestions powered by Duffel.',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/favicon.png', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
   openGraph: {
     type: 'website',
     siteName: BRAND,

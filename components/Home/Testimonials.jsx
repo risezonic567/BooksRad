@@ -5,29 +5,34 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const testimonials = [
   {
-    quote: 'Found a clean London–Dubai option on my phone and the desk confirmed within a day.',
-    name: 'Priya N.',
-    role: 'Solo traveler',
+    quote:
+      'I was flying Delhi to London for work and didn’t want another site full of pop-ups. Searched on my phone, sent the request, and they emailed back the same afternoon with the fare still held.',
+    name: 'Ananya Sharma',
+    role: 'Delhi → London',
   },
   {
-    quote: 'Comparing stops and cabin was easier than the usual maze of pop-ups. Request felt straightforward.',
-    name: 'Marcus T.',
-    role: 'Business trip',
+    quote:
+      'Needed a one-stop to Dubai that wouldn’t wreck the next-day meetings. The offer list was easy to read — airline, stops, price — and the follow-up call was straight to the point.',
+    name: 'Chris Walker',
+    role: 'Chicago → Dubai',
   },
   {
-    quote: 'We booked premium economy for a family of four — clear offer summary before we submitted.',
-    name: 'Elena R.',
-    role: 'Family trip',
+    quote:
+      'Traveling with two kids. We picked premium economy, filled the names once, and got a clear summary before anything was ticketed. Felt calmer than booking half-blind.',
+    name: 'Sofia Alvarez',
+    role: 'Family of four',
   },
   {
-    quote: 'I shortlisted two nonstops, picked one, and the reply email had everything we needed to decide.',
-    name: 'Jordan K.',
-    role: 'Weekend getaway',
+    quote:
+      'My first nonstop sold out overnight. They didn’t vanish — sent two backup options with the price difference spelled out. Ended up on the earlier flight.',
+    name: 'James Okonkwo',
+    role: 'NYC weekend trip',
   },
   {
-    quote: 'Desk followed up with cabin alternatives when my first pick sold out — calm, no pressure.',
-    name: 'Aisha M.',
-    role: 'Premium economy',
+    quote:
+      'Honestly just wanted a human to double-check the return date. Got a short email, no hard sell, and we locked the tickets the next morning.',
+    name: 'Meera Patel',
+    role: 'SFO → Singapore',
   },
 ]
 
@@ -67,7 +72,7 @@ export default function Testimonials() {
             What travelers say
           </h2>
           <p className="mt-3 text-base leading-7 text-ink-600">
-            Short notes from people who searched, selected, and requested through BooksRad.
+            Recent notes from travelers who searched a route and asked our desk to take it from there.
           </p>
         </div>
 
